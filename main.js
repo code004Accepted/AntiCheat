@@ -6,7 +6,7 @@ let win
 
 function createWindow () {
   // 创建浏览器窗口。
-  win = new BrowserWindow({ "width": 1000, "height": 600, "minWidth": 1000, "minHeight": 600, "center": true, "resizable": false, "frame": true, "kiosk": true})
+  win = new BrowserWindow({ "width": 1000, "height": 600, "minWidth": 1000, "minHeight": 600, "center": true, "resizable": false, "kiosk": true})
 
   // 然后加载应用的 index.html。
   win.loadFile('index.html')
