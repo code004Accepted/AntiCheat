@@ -73,21 +73,34 @@ electron-packager . <ProjectName> --platform=<Platform> --arch=<Arch> --icon=<Pa
 参数注明：
 1. <ProjectName>: 生成exe名称
 2. <Platform>: 平台：darwin, linux, mas, win32
+3. <Arch>: x86, x64
+4. <PathToIcon>: ico图标的路径，推荐放置在根目录下，然后就只用写`xxx.ico`了
+5. <AppVersion>: 客户端版本
 
-回到Git Bash，运行：
-
-```
-npm run packx64
-```
-
-为64位系统进行打包
-
-```
-npm run ia32
-```
-
-为32位系统进行打包
-
-最后，您可以在根目录中的out内看到相应的客户端。
+依次为不同系统架构打包后，您就可以在根目录中的out内看到相应的客户端啦~
 
 ## 尽情享用吧！
+
+## 附注
+
+1. 需要详细命令，可以查看之前几个Commits的README，里面有更加详细的代码，不过注释说明不太详细qwq
+
+2. 源代码作者code004Accepted(CBJ)，以`GNU General Public License v3.0`授权：
+
+允许：
+1. 商业用途
+2. 分发
+3. 修改
+4. 专利授权
+5. 私用
+
+要求：
+1. 公开源码
+2. 放置许可协议与版权信息
+3. 使用相同协议
+4. 声明变更
+
+禁止：
+1. 承担责任
+
+请严格遵守版权协议，否则后果自负

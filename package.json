@@ -1,12 +1,12 @@
 {
   "name": "anticheat",
   "version": "1.0.0",
-  "description": "反作弊考试专用客户端",
+  "description": "在线考试反作弊客户端",
   "main": "main.js",
   "scripts": {
     "test": "electron .",
   },
-  "author": "",
-  "license": "ISC",
+  "author": "code004Accepted",
+  "license": "GPLv3",
   "devDependencies": {}
 }
