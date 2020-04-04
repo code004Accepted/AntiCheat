@@ -9,25 +9,30 @@
 
 推荐将Electron和Electron Packager全局化安装，下一次配置时可节省时间
 
-打开Git Bash，输入下面命令：
+打开Git Bash，依次执行下面步骤：
+
+1. 使用`git clone`克隆本仓库代码；
+2. 进入仓库代码目录；
+3. 使用`npm`全局安装`electron`和`electron-packager`（选做，因为有人可能已经安装过了，注意如果不是全局安装的建议卸载重装一遍）
+
+参考代码：
 
 ```
 git clone git@github.com:code004Accepted/AntiCheat.git
 cd AntiCheat
-npm install -g electron
-npm install -g electron-packager
 ```
 
-克隆源码并安装相应的包
+附注：
 
-您也可以选择一个指定文件夹（比如Desktop）并右键在当前目录打开Git Bash来执行上面的操作，这会使后期编辑代码和链接更加方便
+1. `npm`安装指令就不需要我多说了吧，自己按自己的需求来；
+2. 您也可以选择一个指定文件夹（比如Desktop）并右键在当前目录打开Git Bash来执行上面的操作，这会使后期编辑代码和链接更加方便
 
 ## 测试运行
 
-您可以使用我已经打包好的命令进行测试：
+您可以使用下面的命令进行测试：
 
 ```
-npm start
+electron .
 ```
 
 看到弹出窗口即为正常，如果不正常，请尝试执行：
@@ -55,7 +60,19 @@ npm update
 将`<meta http-equiv="refresh" content=1;url="https://ks.wjx.top/jq/68052196.aspx
 ">`中的`https://ks.wjx.top/jq/68052196.aspx`替换为本次考试的链接并保存
 
-## 编译运行
+## 打包分发
+
+electron-packager . HelloWorld --platform=win32 --arch=x64 --icon=computer.ico --out=./out --asar --app-version=0.0.1 --overwrite --ignore=node_modules --electron-version 5.0.0
+
+请使用下面格式的命令在Git Bash中打包：
+
+```
+electron-packager . <ProjectName> --platform=<Platform> --arch=<Arch> --icon=<PathToIcon> --out=./out --asar --app-version=<AppVersion> --overwrite --electron-version 5.0.0
+```
+
+参数注明：
+1. <ProjectName>: 生成exe名称
+2. <Platform>: 平台：darwin, linux, mas, win32
 
 回到Git Bash，运行：
 
