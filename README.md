@@ -67,8 +67,6 @@ npm update
 
 ## 打包分发
 
-electron-packager . HelloWorld --platform=win32 --arch=x64 --icon=computer.ico --out=./out --asar --app-version=0.0.1 --overwrite --ignore=node_modules --electron-version 5.0.0
-
 请使用下面格式的命令在Git Bash中打包：
 
 ```
@@ -76,11 +74,11 @@ electron-packager . <ProjectName> --platform=<Platform> --arch=<Arch> --icon=<Pa
 ```
 
 参数注明：
-1. <ProjectName>: 生成exe名称
-2. <Platform>: 平台：darwin, linux, mas, win32
-3. <Arch>: x86, x64
-4. <PathToIcon>: ico图标的路径，推荐放置在根目录下，然后就只用写`xxx.ico`了
-5. <AppVersion>: 客户端版本
+1. ProjectName: 生成exe名称
+2. Platform: 平台：darwin, linux, mas, win32
+3. Arch: x86, x64
+4. PathToIcon: ico图标的路径，推荐放置在根目录下，然后就只用写`xxx.ico`了
+5. AppVersion: 客户端版本
 
 依次为不同系统架构打包后，您就可以在根目录中的out内看到相应的客户端啦~
 
